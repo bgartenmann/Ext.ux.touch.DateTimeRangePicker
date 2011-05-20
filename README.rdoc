@@ -1,0 +1,17 @@
+== Ext.ux.touch.DateTimePicker
+
+An iOS-like DateTimePicker, similar to the one found in the calendar app.
+
+=== Getting started
+* download or clone repo
+* add all .js files to your index.html, like:
+	<script type="text/javascript" src="path/to/Ext.ux.touch.DateTimePicker/DateTimePicker.js"></script>
+    <script type="text/javascript" src="path/to/Ext.ux.touch.DateTimePicker/DateTimePickerField.js"></script>
+    <script type="text/javascript" src="path/to/Ext.ux.touch.DateTimePicker/DateTimePickerPanel.js"></script>
+    <script type="text/javascript" src="path/to/Ext.ux.touch.DateTimePicker/DateTimeRangeField.js"></script>
+* add .css file to your index.html:
+	<link rel="stylesheet" href="path/to/Ext.ux.touch.DateTimePicker/theme/datetimepicker.css" type="text/css">
+* use it in your forms like any other field:
+	{ xtype: "datetimerangefield" }
+	
+=== For full examples see the provided index.html and main.js files
