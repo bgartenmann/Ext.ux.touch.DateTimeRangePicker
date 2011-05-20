@@ -1,0 +1,73 @@
+
+/* datetimerange field */
+.x-field-datetimerange {
+    border-bottom: 0;
+
+    .x-form-field-container div {
+        padding:0.65em 0.4em 0.65em 0.4em;
+
+        &.x-input-text {
+            background: #F7F7F7 url(images/arrow.png) no-repeat;
+            background-size: 10px 15px;
+            background-position: center right;
+            -webkit-background-origin: content-box;
+            border-radius-right: 0.4em;
+        }
+
+        &.x-field-mask {
+            opacity: 0;
+        }
+
+        .time {
+            float: right;
+            margin-right: 10%;
+        }
+    }
+}
+/***************/
+
+/* datetimepickerfield */
+.x-field-datetimepicker {
+
+    &.selected {
+        .x-form-label, .x-form-field-container .x-input-text {
+            background-color: #E0E0E0;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#E8E8E8), color-stop(0.02, #E8E8E8), to(#D3D1D2));
+            border-bottom-color: #B4B2B3;
+            border-top-color: #E6E6E6;
+            color: #000000;
+            text-shadow: none;
+        }
+    }
+
+    &.error {
+        color:#CC5454;
+    }
+
+    .x-form-field-container div {
+        padding:0.65em 0.4em 0.4em 0.45em;
+        background: #F7F7F7 none;
+        min-height: 2.5em;
+
+        &.x-field-mask {
+            opacity: 0;
+        }
+
+        .time {
+            float: right;
+            margin-right: 5px;
+        }
+    }
+}
+
+.datetimepicker-panel {
+    z-index: 7000 !important;
+
+    &.phone {
+        border: none;
+        .datetimepicker {
+            font-size: 14px;
+        }
+    }
+
+}
