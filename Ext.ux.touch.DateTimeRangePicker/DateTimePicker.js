@@ -1,11 +1,12 @@
 Ext.ns('Ext.ux.touch');
 /**
+ * @author Beni Gartenmann
+ *
  * @class Ext.ux.touch.DateTimePicker
  * @extends Ext.Picker
  *
-Specialized Picker for picking DateTime values.
-
-
+ * Specialized Picker for picking DateTime values.
+ *
  * @xtype datetimepicker
  */
 Ext.ux.touch.DateTimePicker = Ext.extend(Ext.Picker, {
