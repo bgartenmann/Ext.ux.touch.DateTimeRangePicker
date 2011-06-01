@@ -1,11 +1,12 @@
 Ext.ns('Ext.ux.touch');
 /**
+ * @author Beni Gartenmann
+ *
  * @class Ext.ux.touch.DateTimePickerPanel
  * @extends Ext.Panel
  *
-Specialized floating Panel with two DateTimePickerFields and a DateTimePicker inside.
-
-
+ * Specialized floating Panel with two DateTimePickerFields and a DateTimePicker inside.
+ *
  * @xtype datetimepickerpanel
  */
 Ext.ux.touch.DateTimePickerPanel = Ext.extend(Ext.Panel, {

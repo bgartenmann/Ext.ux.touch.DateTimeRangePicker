@@ -1,11 +1,12 @@
 Ext.ns('Ext.ux.touch');
 /**
+ * @author Beni Gartenmann
+ *
  * @class Ext.ux.touch.DateTimePickerField
  * @extends Ext.form.Field
  *
-Specialized field which is connected to a DateTimePicker.
-
-
+ * Specialized field which is connected to a DateTimePicker.
+ *
  * @xtype datetimepickerfield
  */
 Ext.ux.touch.DateTimePickerField = Ext.extend(Ext.form.Field, {

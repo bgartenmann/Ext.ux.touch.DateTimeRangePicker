@@ -1,11 +1,12 @@
 Ext.ns('Ext.ux.touch');
 /**
+ * @author Beni Gartenmann
+ *
  * @class Ext.ux.touch.DateTimeRangeField
  * @extends Ext.form.Field
  *
-Specialized field with a mask which when tapped, shows a Ext.ux.touch.DateTimePickerPanel, for picking datetime values (from, to).
-
-
+ * Specialized field with a mask which when tapped, shows a Ext.ux.touch.DateTimePickerPanel, for picking datetime values (from, to).
+ *
  * @xtype datetimerangefield
  */
 Ext.ux.touch.DateTimeRangeField = Ext.extend(Ext.form.Field, {
