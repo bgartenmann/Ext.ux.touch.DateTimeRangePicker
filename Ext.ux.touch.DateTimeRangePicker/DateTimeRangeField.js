@@ -14,6 +14,8 @@ Ext.ux.touch.DateTimeRangeField = Ext.extend(Ext.form.Field, {
     picker: null,
     destroyPickerOnHide: false,
 
+    useMask: true,
+
     cls: Ext.is.Phone ? 'phone' : '',
 
     labelWidth: '20%',
@@ -29,6 +31,7 @@ Ext.ux.touch.DateTimeRangeField = Ext.extend(Ext.form.Field, {
     },
 
     format: Ext.is.Phone ? "D, M d, 'y" : "D, M d, Y",
+
 
     renderTpl: [
     '<tpl if="label">',
@@ -46,8 +49,8 @@ Ext.ux.touch.DateTimeRangeField = Ext.extend(Ext.form.Field, {
 
     // @private
     initComponent: function() {
+        this.cls = this.useMask ? this.cls : this.cls + "display-only";
         this.tabIndex = -1;
-        this.useMask = true;
         Ext.ux.touch.DateTimeRangeField.superclass.initComponent.apply(this, arguments);
     },
 
@@ -63,7 +66,7 @@ Ext.ux.touch.DateTimeRangeField = Ext.extend(Ext.form.Field, {
 
         if(Ext.is.Phone){
             Ext.apply(config, {
-               fullscreen: true
+                fullscreen: true
             });
         }
 

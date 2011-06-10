@@ -3,6 +3,14 @@
 .x-field-datetimerange {
     border-bottom: 0;
 
+    &.display-only {
+        .x-form-field-container div {
+            &.x-input-text {
+                background: #F7F7F7;
+            }
+        }
+    }
+
     .x-form-field-container div {
         padding:0.65em 0.4em 0.65em 0.4em;
 
