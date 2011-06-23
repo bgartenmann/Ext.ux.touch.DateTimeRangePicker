@@ -73,9 +73,18 @@ Ext.ux.touch.DateTimePickerField = Ext.extend(Ext.form.Field, {
         var value = this.value || null;
 
         if(this.format){
-            value = value.format(this.format) + "<span class='time'>"+ value.format('H:i') +"</span>";
+            var date = value.format(this.format);
+            if(this.from_field && value.format('dmY') == this.from_field.value.format('dmY')){
+                date = '';
+            }
+
+            value = date + "<span class='time'>"+ value.format('H:i') +"</span>";
         }
         return value;
+    },
+
+    refreshValue: function() {
+        this.fieldEl.dom.innerHTML = this.getValue();
     }
 });
 

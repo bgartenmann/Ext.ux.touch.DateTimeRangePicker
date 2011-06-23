@@ -163,6 +163,8 @@ Ext.ux.touch.DateTimePickerPanel = Ext.extend(Ext.Panel, {
      */
     onPickerChange : function(picker, value) {
         this.dateTimePicker.ref_field.setValue(value);
+        this.to_field.refreshValue();
+        
         if(this.dateTimePicker.ref_field.value > this.to_field.value || this.dateTimePicker.ref_field.value < this.from_field.value){
             this.to_field.getEl().addCls('error');
             this.from_field.getEl().addCls('error');
