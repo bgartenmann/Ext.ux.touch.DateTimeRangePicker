@@ -87,7 +87,7 @@ Ext.ux.touch.DateTimeRangeField = Ext.extend(Ext.form.Field, {
         if(Ext.is.Phone){
             this.getDateTimePickerPanel().show();
         } else {
-            this.getDateTimePickerPanel().showBy(this);
+            this.getDateTimePickerPanel().showBy(this, '', false);
         }
     },
 
@@ -124,7 +124,9 @@ Ext.ux.touch.DateTimeRangeField = Ext.extend(Ext.form.Field, {
         var value = this.value || null;
         if(Ext.isObject(value)){
             if(this.format){
-                value = value.from.format(this.format) + "<span class='time'>"+ value.from.format('H:i') +"</span><br />" + value.to.format(this.format) + "<span class='time'>"+ value.to.format('H:i') +"</span>";
+            	var date_from = value.from.format(this.format);
+                var date_to = date_from != value.to.format(this.format) ? value.to.format(this.format) : '';
+                value = date_from + "<span class='time'>"+ value.from.format('H:i') +"</span><br />" + date_to + "<span class='time'>"+ value.to.format('H:i') +"</span>";
             } else {
                 value = value.from + "<br />" + value.to
             }
