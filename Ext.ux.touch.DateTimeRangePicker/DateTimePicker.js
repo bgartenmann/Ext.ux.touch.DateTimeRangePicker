@@ -182,7 +182,9 @@ Ext.ux.touch.DateTimePicker = Ext.extend(Ext.Picker, {
     // @private
     getDaysInMonth: function(month, year) {
         var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        return month == 2 && this.isLeapYear(year) ? 29 : daysInMonth[month];
+        // if month is Feburary (i.e. month 1, due to getDate() counts from 0
+        // and isLeapYear() return 29 days else return daysInMonth[month as arrayIndex]
+        return month == 1 && this.isLeapYear(year) ? 29 : daysInMonth[month];th[month];
     },
 
     // @private
